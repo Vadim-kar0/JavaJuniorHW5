@@ -60,7 +60,7 @@ public class ClientManager implements Runnable{
      * @param message сообщение
      */
 
-    private synchronized void broadcastMessage(String message){
+    private void broadcastMessage(String message){
         for(ClientManager client : clients){
             try {
                 if(message != null && message.startsWith("@")){
